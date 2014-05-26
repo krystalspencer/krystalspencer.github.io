@@ -44,7 +44,12 @@
           return character;
         }
         
-        var transformedCharCode = (((characterToNumber(character)-65)*myMultiplier)+myAdder)%26 + 65;
+        var transformedCharCode = -1;
+        var char =  characterToNumber(character)-65;
+        var charmult = char*myMultiplier
+        var charadd = charmult+myAdder
+        var charmod = charadd % 26 
+        var transformedCharCode = charmod + 65;
         
         // WORK:
         // Encrypt the character. Remember that "A" -> 65 in ASCII, so you'll first need to subtract
