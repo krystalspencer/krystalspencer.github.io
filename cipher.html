@@ -39,15 +39,15 @@
        *
        * Note that this differs from decrypt_character in the order of operations performed!
        */
-      function encrypt_character(character, int myAdder, int myMultiplier) {
+      function encrypt_character(character, myAdder, myMultiplier) {
         if (!isAlpha(character)) {
           return character;
         }
         
         var transformedCharCode = -1;
-        var char =  characterToNumber("character")-characterToNumber("A");
-        var charmult = char*myMultiplier;
-        var charadd = charmult+myAdder;
+        var char =  characterToNumber(character)-characterToNumber("A");
+        var charmult = (char*myMultiplier);
+        var charadd = (charmult + myAdder);
         var charmod = charadd % 26; 
         transformedCharCode = charmod + characterToNumber("A") ;
         
