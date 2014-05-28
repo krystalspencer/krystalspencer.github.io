@@ -121,8 +121,17 @@
         var myMultiplier = parseInt(multiplier.value);
         var inverseAdder = -1;
         var inverseMultiplier = -1;
+        
+        for(var k = 0; k<=25; k++){
+          if(k+myAdder % 26 ==0){
+            myAdder = k;
+          }
+          if(k*myMultiplier % 26 == 1){
+            myMultiplier = k;
+          }
+        }
 
-        // WORK:
+        // WOR:
         // LOOP OVER THE NUMBERS BETWEEN 0 and 26 here. Once you find the number x such that
         // (myAdder + x) % 26 == 0, set myAdder = x
         //
