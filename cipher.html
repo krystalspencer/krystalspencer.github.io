@@ -66,9 +66,13 @@
         var input = ciphertext.value.toUpperCase();
         var myAdder = parseInt(adder.value);
         var myMultiplier = parseInt(multiplier.value);
+        var decryptChar=26-myAdder;
+         var decryptMult =0;
 
         var output = "";
-        for (var i = 0; i < input.length; i = i + 1) {
+        for (var i = 0; i < input.length; i = i + 1) 
+            if (myMultiplier*i%26 == 1)
+            decryptMult= i;
           // WORK:
           // Call decrypt_character with the arguments input[i], myAdder, myMultiplier
           // and concatenate the returned value to output.
