@@ -122,8 +122,9 @@
         var inverseAdder = -1;
         var inverseMultiplier = -1;
         
-        for(var k = 0; k<=26; k++){
-          if(k+myAdder % 26 ==0){
+        for(var k = 0; k<=25; k++){
+          var check = k+myAdder;
+          if(check % 26 ==0){
             inverseAdder = k;
           }
           if(k*myMultiplier % 26 == 1){
